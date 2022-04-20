@@ -24,4 +24,6 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor
 
 WORKDIR /opt/workspace
 
+USER root
+
 CMD [ "sleep", "infinity" ]
