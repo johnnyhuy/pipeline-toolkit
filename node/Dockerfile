@@ -19,7 +19,8 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor
     apt-get update && export DEBIAN_FRONTEND=noninteractive && \
     apt-get -y install --no-install-recommends docker-ce-cli && \
     mkdir -p $DOCKER_CONFIG/cli-plugins && \
-    curl -SL uname/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname)-$(arch) -o $DOCKER_CONFIG/cli-plugins/docker-compose
+    curl -SL https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname)-$(arch) -o $DOCKER_CONFIG/cli-plugins/docker-compose && \
+    chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 
 WORKDIR /opt/workspace
 
