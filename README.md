@@ -10,6 +10,6 @@
 docker-compose build
 
 # Run a container
-# docker-compose run --rm <service>
-docker-compose run --rm kubernetes
+# docker-compose run --rm <service> /bin/bash
+docker-compose run --rm kubernetes /bin/bash
 ```

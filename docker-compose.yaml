@@ -1,16 +1,13 @@
-
 version: '3.9'
 
 services:
   kubernetes:
     image: johnnyhuy/pipeline-toolkit:kubernetes
-    commmand: /bin/bash
     build:
       context: kubernetes
 
   node:
     image: johnnyhuy/pipeline-toolkit:node-16
-    commmand: /bin/bash
     build:
       context: node
 
