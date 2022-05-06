@@ -2,10 +2,13 @@
 version: '3.9'
 
 services:
-  dev:
-    image: johnnyhuy/pipeline-toolkit:node-16
-    volumes:
-      - ./:/opt/workspace:cached
-      - /var/run/docker.sock:/var/run/docker.sock
+  kubernetes:
+    image: johnnyhuy/pipeline-toolkit:kubernetes
     build:
-      context: .devcontainer
+      context: kubernetes
+
+  node:
+    image: johnnyhuy/pipeline-toolkit:node-16
+    build:
+      context: node
+
