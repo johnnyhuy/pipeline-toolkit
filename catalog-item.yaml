@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pipeline-toolkit
+  title: Pipeline Toolkit
+  description: A collection of Dockerfiles and scripts for setting up CI/CD pipelines
+  tags:
+    - docker
+spec:
+  type: library
+  lifecycle: experimental
+  owner: johnnyhuy
